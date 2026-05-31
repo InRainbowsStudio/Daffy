@@ -134,7 +134,7 @@
            <div class="grid md:grid-cols-2 gap-12">
               
                <!-- Formular -->
-               <form action="#" method="POST" class="space-y-6">
+               <form action="https://formsubmit.co/kontakt@inrainbows.de" method="POST" class="space-y-6">
                    <div>
                        <label for="name" class="block text-sm font-medium text-indigo-200 mb-2">Name *</label>
                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-indigo-800 border border-indigo-700 text-white focus:outline-none focus:ring-2 focus:ring-white">
@@ -179,6 +179,12 @@
                    </div>
                    <button type="submit" class="w-full bg-white text-indigo-900 font-bold py-4 rounded-lg hover:bg-gray-100 transition shadow-lg">Nachricht senden</button>
                </form>
+
+               <!-- Verhindert das Google-Captcha (für einen sauberen Ablauf) -->
+                <input type="hidden" name="_captcha" value="false">
+  
+              <!-- Sorgt dafür, dass nach dem Absenden deine Seite einfach neu geladen wird -->
+               <input type="hidden" name="_next" value="https://www.inrainbows.de">
 
 
                <!-- Location Info -->
