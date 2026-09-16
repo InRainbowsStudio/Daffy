@@ -24,20 +24,46 @@
 <body class="bg-gray-50 text-gray-900 font-sans">
 
 
-   <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md ">
-       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="flex items-center h-16 space-x-8">
-               <a href="#hero" class="font-bold text-xl text-indigo-600 transition"><span style="color: rgb(94, 255, 255);">In</span> <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> <span style="color: white; font-weight: normal;">Studio</span></a>
-               <div class="hidden md:flex space-x-8">
+   <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <a href="#hero" class="font-bold text-xl text-indigo-600 transition">
+                <span style="color: rgb(94, 255, 255);">In</span> 
+                <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> 
+                <span style="color: white; font-weight: normal;">Studio</span>
+            </a>
+
+            <!-- Desktop Menü (wird auf dem Handy ausgeblendet) -->
+            <div class="hidden md:flex space-x-8">
                 <a href="#news" class="text-white hover:text-cyan-400 transition">Aktuelles</a>
                 <a href="#services" class="text-white hover:text-pink-400 transition">Ballettkurse</a>
                 <a href="#about" class="text-white hover:text-orange-400 transition">Über mich</a>
                 <a href="#pricing" class="text-white hover:text-purple-400 transition">Preise</a>
                 <a href="#contact" class="text-white hover:text-green-400 transition">Kontakt</a>
             </div>
-           </div>
-       </div>
-   </nav>
+
+            <!-- Burger-Button (nur auf Mobile sichtbar: md:hidden) -->
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="text-white focus:outline-none p-2" aria-label="Menü öffnen">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ausklappbares Mobile-Menü (standardmäßig versteckt: hidden) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800 px-4 pt-4 pb-6 space-y-4">
+        <a href="#news" class="mobile-link block text-white hover:text-cyan-400 transition text-lg font-medium">Aktuelles</a>
+        <a href="#services" class="mobile-link block text-white hover:text-pink-400 transition text-lg font-medium">Ballettkurse</a>
+        <a href="#about" class="mobile-link block text-white hover:text-orange-400 transition text-lg font-medium">Über mich</a>
+        <a href="#pricing" class="mobile-link block text-white hover:text-purple-400 transition text-lg font-medium">Preise</a>
+        <a href="#contact" class="mobile-link block text-white hover:text-green-400 transition text-lg font-medium">Kontakt</a>
+    </div>
+</nav>
+
 
    <a href="#contact" id="floating-contact-btn" class="fixed right-6 bottom-6 z-50 bg-orange-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-600 transition-all duration-300 flex items-center justify-center opacity-100 scale-100 pointer-events-auto" aria-label="Zu Kontakt scrollen">
     <!-- Briefumschlag SVG-Icon -->
@@ -443,6 +469,23 @@
 
 
    <script>
+
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            // Menü öffnen/schließen beim Klick auf den Burger-Button
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Menü automatisch schließen, wenn man auf einen Menüpunkt klickt (damit man zur Section springt)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
        function toggleChildFields() {
            const courseSelect = document.getElementById('course');
            const childFields = document.getElementById('child-fields');
