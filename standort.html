@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Standort</title>
+   <link rel="icon" type="image/x-icon" href="/images/icon.png">
+   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+       html {
+           scroll-behavior: smooth;
+       }
+       .hero-bg {
+           background-color: #374151;
+           background-image: url(./images/background.jpeg);
+           background-size: cover;
+           background-position: center;
+       }
+       .bg-custom-news-about {
+           background-color: #E5F0FE;
+       }
+   </style>
+  </head>
+
+  <body>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#hero" class="font-bold text-xl text-indigo-600 transition">
+                    <span style="color: rgb(94, 255, 255);">In</span> 
+                    <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> 
+                    <span style="color: white; font-weight: normal;">Studio</span>
+                </a>
+
+                <!-- Desktop Menü (wird auf dem Handy ausgeblendet) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#news" class="text-white hover:text-cyan-400 transition">Aktuelles</a>
+                    <a href="index.html#services" class="text-white hover:text-pink-400 transition">Ballettkurse</a>
+                    <a href="index.html#about" class="text-white hover:text-orange-400 transition">Über mich</a>
+                    <a href="index.html#pricing" class="text-white hover:text-purple-400 transition">Preise</a>
+                    <a href="index.html#contact" class="text-white hover:text-green-400 transition">Kontakt</a>
+                </div>
+
+                <!-- Burger-Button (nur auf Mobile sichtbar: md:hidden) -->
+                <div class="md:hidden">
+                    <button id="menu-btn" type="button" class="text-white focus:outline-none p-2" aria-label="Menü öffnen">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ausklappbares Mobile-Menü (standardmäßig versteckt: hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800 px-4 pt-4 pb-6 space-y-4">
+            <a href="index.html#news" class="mobile-link block text-white hover:text-cyan-400 transition text-lg font-medium">Aktuelles</a>
+            <a href="index.html#services" class="mobile-link block text-white hover:text-pink-400 transition text-lg font-medium">Ballettkurse</a>
+            <a href="index.html#about" class="mobile-link block text-white hover:text-orange-400 transition text-lg font-medium">Über mich</a>
+            <a href="index.htmlindex.html#pricing" class="mobile-link block text-white hover:text-purple-400 transition text-lg font-medium">Preise</a>
+            <a href="index.html#contact" class="mobile-link block text-white hover:text-green-400 transition text-lg font-medium">Kontakt</a>
+        </div>
+    </nav>
+
+
+   <a href="index.html#contact" id="floating-contact-btn" class="fixed right-6 bottom-6 z-50 bg-orange-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-600 transition-all duration-300 flex items-center justify-center opacity-100 scale-100 pointer-events-auto" aria-label="Zu Kontakt scrollen">
+    <!-- Briefumschlag SVG-Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+</a>
+
+   
+
+   <section id="contact" class="py-20 bg-gradient-to-b from-green-600 to-green-400 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center p-6">
+        Wegbeschreibung
+      </h1>
+    </div>
+
+    <div class="max-w-md mx-auto px-4">
+      <video 
+        class="w-100 h-100 rounded-xl shadow-lg" 
+        controls 
+        playsinline
+      >
+        <source src="videos/route.mov" type="video/mp4" />
+      </video>
+    </div>
+
+    <!--Eingang-->
+    <div class="max-w-4xl mt-10 mx-auto">
+      <h3 class="text-2xl md:text-2xl font-bold mb-1 text-center p-6">
+        Eingang
+      </h3>
+    </div>
+    <div class="max-w-md mx-auto ">
+      <img 
+        src="images/eingang.jpg" 
+        alt="Beschreibung des Bildes" 
+        class="w-full h-auto rounded-xl shadow-2xl object-cover"
+         />
+    </div>
+
+    <!--Karte-->
+    <div class="max-w-4xl mt-10 mx-auto">
+      <h3 class="text-2xl md:text-4xl font-bold mb-1 text-center p-6">
+        Karte
+      </h2>
+    </div>
+    <div class="max-w-md mx-auto ">
+      <img 
+        src="images/map.jpg" 
+        alt="Beschreibung des Bildes" 
+        class="w-full h-auto rounded-xl shadow-2xl object-cover"
+         />
+    </div>
+
+     <!--Earth-->
+    <div class="max-w-md mx-auto pt-6 ">
+      <img 
+        src="images/earth.jpg" 
+        alt="Beschreibung des Bildes" 
+        class="w-full h-auto rounded-xl shadow-2xl object-cover"
+         />
+    </div>
+
+
+    <div style="margin-top: 20px; display: flex; justify-content: center;">
+    <a href="index.html" class="bg-pink-600 text-white mt-8 px-8 py-3 rounded-full hover:bg-orange-500 transition shadow-lg font-bold">Startseite</a>
+  </div>
+
+
+   </section>
+
+
+    
+
+
+    <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm">
+      <p>&copy; 2026 In Rainbows Studio. Alle Rechte reserviert.</p>
+      <p style="font-weight: bold; text-decoration: underline; margin-top: 4px;"><a href="impressum.html" > Impressum</a></p>
+      <p style="font-weight: bold; text-decoration: underline; margin-top: 4px;"><a href="datenschutz.html" > Datenschutzerklärung</a></p>
+
+   </footer>
+
+   <script>
+
+           const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            // Menü öffnen/schließen beim Klick auf den Burger-Button
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Menü automatisch schließen, wenn man auf einen Menüpunkt klickt (damit man zur Section springt)
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+   </script>
+
+  </body>
+
+</html>
