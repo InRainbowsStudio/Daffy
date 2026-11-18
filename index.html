@@ -23,46 +23,47 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
+    <header>
+        <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16">
+                        <!-- Logo -->
+                        <a href="#hero" class="font-bold text-xl text-indigo-600 transition">
+                            <span style="color: rgb(94, 255, 255);">In</span> 
+                            <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> 
+                            <span style="color: white; font-weight: normal;">Studio</span>
+                        </a>
 
-   <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <a href="#hero" class="font-bold text-xl text-indigo-600 transition">
-                    <span style="color: rgb(94, 255, 255);">In</span> 
-                    <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> 
-                    <span style="color: white; font-weight: normal;">Studio</span>
-                </a>
+                        <!-- Desktop Menü (wird auf dem Handy ausgeblendet) -->
+                        <div class="hidden md:flex space-x-8">
+                            <a href="#news" class="text-white hover:text-cyan-400 transition">Aktuelles</a>
+                            <a href="#services" class="text-white hover:text-pink-400 transition">Ballettkurse</a>
+                            <a href="#about" class="text-white hover:text-orange-400 transition">Über mich</a>
+                            <a href="#pricing" class="text-white hover:text-purple-400 transition">Preise</a>
+                            <a href="#contact" class="text-white hover:text-green-400 transition">Kontakt</a>
+                        </div>
 
-                <!-- Desktop Menü (wird auf dem Handy ausgeblendet) -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#news" class="text-white hover:text-cyan-400 transition">Aktuelles</a>
-                    <a href="#services" class="text-white hover:text-pink-400 transition">Ballettkurse</a>
-                    <a href="#about" class="text-white hover:text-orange-400 transition">Über mich</a>
-                    <a href="#pricing" class="text-white hover:text-purple-400 transition">Preise</a>
-                    <a href="#contact" class="text-white hover:text-green-400 transition">Kontakt</a>
+                        <!-- Burger-Button (nur auf Mobile sichtbar: md:hidden) -->
+                        <div class="md:hidden">
+                            <button id="menu-btn" type="button" class="text-white focus:outline-none p-2" aria-label="Menü öffnen">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Burger-Button (nur auf Mobile sichtbar: md:hidden) -->
-                <div class="md:hidden">
-                    <button id="menu-btn" type="button" class="text-white focus:outline-none p-2" aria-label="Menü öffnen">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                <!-- Ausklappbares Mobile-Menü (standardmäßig versteckt: hidden) -->
+                <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800 px-4 pt-4 pb-6 space-y-4">
+                    <a href="#news" class="mobile-link block text-white hover:text-cyan-400 transition text-lg font-medium">Aktuelles</a>
+                    <a href="#services" class="mobile-link block text-white hover:text-pink-400 transition text-lg font-medium">Ballettkurse</a>
+                    <a href="#about" class="mobile-link block text-white hover:text-orange-400 transition text-lg font-medium">Über mich</a>
+                    <a href="#pricing" class="mobile-link block text-white hover:text-purple-400 transition text-lg font-medium">Preise</a>
+                    <a href="#contact" class="mobile-link block text-white hover:text-green-400 transition text-lg font-medium">Kontakt</a>
                 </div>
-            </div>
-        </div>
-
-        <!-- Ausklappbares Mobile-Menü (standardmäßig versteckt: hidden) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800 px-4 pt-4 pb-6 space-y-4">
-            <a href="#news" class="mobile-link block text-white hover:text-cyan-400 transition text-lg font-medium">Aktuelles</a>
-            <a href="#services" class="mobile-link block text-white hover:text-pink-400 transition text-lg font-medium">Ballettkurse</a>
-            <a href="#about" class="mobile-link block text-white hover:text-orange-400 transition text-lg font-medium">Über mich</a>
-            <a href="#pricing" class="mobile-link block text-white hover:text-purple-400 transition text-lg font-medium">Preise</a>
-            <a href="#contact" class="mobile-link block text-white hover:text-green-400 transition text-lg font-medium">Kontakt</a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
 
    <a href="#contact" id="floating-contact-btn" class="fixed right-6 bottom-6 z-50 bg-orange-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-600 transition-all duration-300 flex items-center justify-center opacity-100 scale-100 pointer-events-auto" aria-label="Zu Kontakt scrollen">
@@ -72,463 +73,464 @@
     </svg>
 </a>
 
+<main>
+    <section id="hero" class="min-h-screen flex items-center justify-center relative hero-bg">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <div class="text-center px-4 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+                <span style="color: rgb(94, 255, 255);">In</span> <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> <span style="color: white; font-weight: normal;">Studio</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-green-300 font-medium mb-2">Ballet is for Everyone. Jeder ist willkommen.</p>
+            <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
+                Dein Ballettunterricht im Wedding. Der Wohlfühlort für Klassisches Ballett in Berlin - egal ob Absoluter Anfänger, Wiedereinsteiger oder mitten drin! 🩰
+            </p>
+            <a href="#services" class="bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-orange-500 transition shadow-lg font-bold">Mehr erfahren</a>
+        </div>
+    </section>
 
-   <section id="hero" class="min-h-screen flex items-center justify-center relative hero-bg">
-       <div class="absolute inset-0 bg-black/80"></div>
-       <div class="text-center px-4 relative z-10">
-           <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
-               <span style="color: rgb(94, 255, 255);">In</span> <span style="color: rgb(247, 85, 166);">Rain</span><span style="color: rgb(255, 111, 58);">bows</span> <span style="color: white; font-weight: normal;">Studio</span>
-           </h1>
-           <p class="text-xl md:text-2xl text-green-300 font-medium mb-2">Ballet is for Everyone. Jeder ist willkommen.</p>
-           <p class="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-               Dein Ballettunterricht im Wedding. Der Wohlfühlort für Klassisches Ballett in Berlin - egal ob Absoluter Anfänger, Wiedereinsteiger oder mitten drin! 🩰
-           </p>
-           <a href="#services" class="bg-pink-600 text-white px-8 py-3 rounded-full hover:bg-orange-500 transition shadow-lg font-bold">Mehr erfahren</a>
-       </div>
-   </section>
 
-
-<section id="news" class="py-20 bg-custom-news-about bg-gradient-to-b from-cyan-400 to-cyan-700">
-    <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16"><span style="color: white;">Dein Start ins Ballett</span></h2>
-        
-        <!-- Bilder-Grid oben -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
-                <img src="./images/news1.jpg" alt="News 1" class="w-full h-full object-cover">
+    <section id="news" class="py-20 bg-custom-news-about bg-gradient-to-b from-cyan-400 to-cyan-700">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16"><span style="color: white;">Dein Start ins Ballett</span></h2>
+            
+            <!-- Bilder-Grid oben -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
+                    <img src="./images/news1.jpg" alt="News 1" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
+                    <img src="./images/news2.jpg" alt="News 2" class="w-full h-full object-cover">
+                </div>
             </div>
-            <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
-                <img src="./images/news2.jpg" alt="News 2" class="w-full h-full object-cover">
+
+            <!-- Text-Bereich -->
+            <div class="text-left max-w-2xl mx-auto text-white leading-relaxed">
+                <p class="font-bold text-lg mb-4">Melde dich zu einer kostenlosen Probestunde an!</p>
+                <p class="mb-6">In der Probestunde haben alle vorab die Chance in den Ballettunterricht hinein zu schnuppern. Ideal also, um alles auszuprobieren und um mich und den Unterricht richtig kennenzulernen!</p>
+                
+
+                <!-- Unterer Bereich: Zeiten und Button mit mehr Abstand (gap-12) -->
+                <div class="flex flex-col md:flex-row md:items-center gap-12">
+                    <div>
+                        <p class="font-bold">Jeden Mittwoch</p>
+                        <p class="font-bold">Kinder: 16-17 Uhr</p>
+                        <p class="font-bold">Erwachsene: 17-18 Uhr</p>
+                    </div>
+
+                    <div>
+                        <a href="#contact" class="inline-block bg-orange-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-400 transition shadow-xl">
+                            JETZT ANMELDEN
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Text-Bereich -->
-        <div class="text-left max-w-2xl mx-auto text-white leading-relaxed">
-            <p class="font-bold text-lg mb-4">Melde dich zu einer kostenlosen Probestunde an!</p>
-            <p class="mb-6">In der Probestunde haben alle vorab die Chance in den Ballettunterricht hinein zu schnuppern. Ideal also, um alles auszuprobieren und um mich und den Unterricht richtig kennenzulernen!</p>
-            
 
-            <!-- Unterer Bereich: Zeiten und Button mit mehr Abstand (gap-12) -->
-            <div class="flex flex-col md:flex-row md:items-center gap-12">
-                <div>
-                    <p class="font-bold">Jeden Mittwoch</p>
-                    <p class="font-bold">Kinder: 16-17 Uhr</p>
-                    <p class="font-bold">Erwachsene: 17-18 Uhr</p>
+    <section id="services" class="py-20 bg-gradient-to-b from-orange-600 to-orange-400">
+        <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16"><span style="color: white;">Meine Ballettkurse </span></h2>
+        
+        <div class="flex flex-col md:flex-row gap-8 items-start mb-16">
+            <!-- Bild links -->
+            <div class="w-full md:w-1/3 flex-shrink-0">
+                <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
+                    <img src="./images/kinder.jpg" alt="Kinderballett" class="w-full h-full object-cover">
                 </div>
+            </div>
 
+            <!-- Text UND Button in einem gemeinsamen Container rechts -->
+            <div class="flex-1 pt-2">
+                <h3 class="text-2xl font-bold mb-1"><span style="color: white;">Kinderballett 5-7 Jahre</span></h3>
+                <p class="text-white font-semibold mb-4">Mittwoch, 16:00-17:00</p>
+                <p class="text-white mb-6">Im Ballettkurs ab 5 Jahren erarbeiten wir die klassische Balletttechnik auf spielerische und altersgerechte Weise. Im 60-minütigen Unterricht trainieren wir die Grundlagen des Balletts, die Musikalität, Haltung, Beweglichkeit und Ausdauer. Die ersten Ballettschritte, Fuß- und Armpositionen, sowie Dehnübungen sind wichtiger Bestandteil des Kinderballett-Unterrichts.<br><br>Ein weiterer großer Augenmerk liegt auf der Tanzimprovisation. Die Kinder lernen dabei selbst kreativ zu sein und trotz technischem Training und Disziplin immer den Spaß am Tanz zu behalten.</p>
+                
+                <!-- Button jetzt direkt unter dem Text -->
                 <div>
-                    <a href="#contact" class="inline-block bg-orange-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-400 transition shadow-xl">
-                        JETZT ANMELDEN
+                    <a href="#contact" class="inline-block bg-blue-400 text-white font-bold px-8 py-4 rounded-lg hover:bg-pink-600 transition shadow-xl">
+                        KOSTENLOSE PROBESTUNDE
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-   <section id="services" class="py-20 bg-gradient-to-b from-orange-600 to-orange-400">
-       <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16"><span style="color: white;">Meine Ballettkurse </span></h2>
-    
-    <div class="flex flex-col md:flex-row gap-8 items-start mb-16">
-        <!-- Bild links -->
-        <div class="w-full md:w-1/3 flex-shrink-0">
-            <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
-                <img src="./images/kinder.jpg" alt="Kinderballett" class="w-full h-full object-cover">
-            </div>
-        </div>
-
-        <!-- Text UND Button in einem gemeinsamen Container rechts -->
-        <div class="flex-1 pt-2">
-            <h3 class="text-2xl font-bold mb-1"><span style="color: white;">Kinderballett 5-7 Jahre</span></h3>
-            <p class="text-white font-semibold mb-4">Mittwoch, 16:00-17:00</p>
-            <p class="text-white mb-6">Im Ballettkurs ab 5 Jahren erarbeiten wir die klassische Balletttechnik auf spielerische und altersgerechte Weise. Im 60-minütigen Unterricht trainieren wir die Grundlagen des Balletts, die Musikalität, Haltung, Beweglichkeit und Ausdauer. Die ersten Ballettschritte, Fuß- und Armpositionen, sowie Dehnübungen sind wichtiger Bestandteil des Kinderballett-Unterrichts.<br><br>Ein weiterer großer Augenmerk liegt auf der Tanzimprovisation. Die Kinder lernen dabei selbst kreativ zu sein und trotz technischem Training und Disziplin immer den Spaß am Tanz zu behalten.</p>
             
-            <!-- Button jetzt direkt unter dem Text -->
-            <div>
-                <a href="#contact" class="inline-block bg-blue-400 text-white font-bold px-8 py-4 rounded-lg hover:bg-pink-600 transition shadow-xl">
-                    KOSTENLOSE PROBESTUNDE
-                </a>
-            </div>
-        </div>
-    </div>
-           
 
 
-           <div class="max-w-4xl mx-auto px-4">
-    <!-- Falls die Überschrift hier noch fehlt, kannst du sie bei Bedarf einfügen -->
-    
-    <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
-        <div class="w-full md:w-1/3 flex-shrink-0">
-            <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
-                <img src="./images/erwachsene.jpg" alt="Teens & Erwachsene" class="w-full h-full object-cover">
-            </div>
-        </div>
+            <div class="max-w-4xl mx-auto px-4">
+        <!-- Falls die Überschrift hier noch fehlt, kannst du sie bei Bedarf einfügen -->
         
-        <!-- Text UND Button im selben Container -->
-        <div class="flex-1 pt-2">
-            <h3 class="text-2xl font-bold mb-1"><span style="color: white;">Ballett Beginner Erwachsene</span></h3>
-            <p class="text-white font-semibold mb-4">Mittwoch, 17:00-18:00</p>
-            <p class="text-white mb-6">Ob jung oder alt, mit oder ohne Vorkenntnisse - Ballett ist für alle da. 🫶🏻<br><br>Du hast schon lange den Wunsch dir deinen Kindheitstraum zu erfüllen und endlich auch in die Ballett-Welt einzutauchen? Der Erwachsenen-Kurs ab 16 Jahren bietet für alle Beginner einen Ort, an dem wir ohne Druck Stück für Stück an der Balletttechnik und dem tänzerischen Ausdruck arbeiten können.<br>Ich lege viel Wert auf Harmonie und das Miteinander in einer stabilen Gruppe, die gemeinsam wächst und kontinuierlich als eine Class sich weiterentwickelt.<br>Der Fokus liegt auf Eleganz, sauberer Grundtechnik und Mobilität - jeder in seinem Tempo und mit individueller Förderung.</p>
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+            <div class="w-full md:w-1/3 flex-shrink-0">
+                <div class="bg-gray-200 aspect-[1/1.414] rounded-2xl flex items-center justify-center text-gray-500 shadow-2xl overflow-hidden">
+                    <img src="./images/erwachsene.jpg" alt="Teens & Erwachsene" class="w-full h-full object-cover">
+                </div>
+            </div>
             
-            <!-- Button direkt unter dem Text -->
-            <div>
-                <a href="#contact" class="inline-block bg-blue-400 text-white font-bold px-8 py-4 rounded-lg hover:bg-pink-600 transition shadow-xl">
-                    KOSTENLOSE PROBESTUNDE
-                </a>
+            <!-- Text UND Button im selben Container -->
+            <div class="flex-1 pt-2">
+                <h3 class="text-2xl font-bold mb-1"><span style="color: white;">Ballett Beginner Erwachsene</span></h3>
+                <p class="text-white font-semibold mb-4">Mittwoch, 17:00-18:00</p>
+                <p class="text-white mb-6">Ob jung oder alt, mit oder ohne Vorkenntnisse - Ballett ist für alle da. 🫶🏻<br><br>Du hast schon lange den Wunsch dir deinen Kindheitstraum zu erfüllen und endlich auch in die Ballett-Welt einzutauchen? Der Erwachsenen-Kurs ab 16 Jahren bietet für alle Beginner einen Ort, an dem wir ohne Druck Stück für Stück an der Balletttechnik und dem tänzerischen Ausdruck arbeiten können.<br>Ich lege viel Wert auf Harmonie und das Miteinander in einer stabilen Gruppe, die gemeinsam wächst und kontinuierlich als eine Class sich weiterentwickelt.<br>Der Fokus liegt auf Eleganz, sauberer Grundtechnik und Mobilität - jeder in seinem Tempo und mit individueller Förderung.</p>
+                
+                <!-- Button direkt unter dem Text -->
+                <div>
+                    <a href="#contact" class="inline-block bg-blue-400 text-white font-bold px-8 py-4 rounded-lg hover:bg-pink-600 transition shadow-xl">
+                        KOSTENLOSE PROBESTUNDE
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-   </section>
+    </section>
 
 
-   <section id="about" class="py-20 bg-custom-news-about bg-gradient-to-b from-pink-500 to-pink-600">
-       <div class="max-w-4xl mx-auto px-4">
-           <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><span style="color: white;">Über mich</span></h2>
-           <div class="flex flex-col md:flex-row gap-8 items-start">
-               <div class="w-full md:w-1/3 flex-shrink-0">
-                   <div class="aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden shadow-md">
-                       <img src="./images/ich.jpg" alt="Über mich" class="w-full h-full object-cover">
-                   </div>
-               </div>
-               <div class="flex-1 text-white text-lg leading-relaxed">
-                   <p class="mb-4">Ich bin Anna, diplomierte Tanzpädagogin und möchte im In Rainbows Studio mit euch meine Leidenschaft fürs Klassische Ballett teilen.</p>
-                   <p class="mb-4">Ich habe zahlreiche Erfahrungen auf der Bühne in verschiedensten klassischen und zeitgenössischen Tanzproduktionen sammeln dürfen und später in meiner Arbeit als Ballettpädagogin für zahlreiche Kinder und Jugendliche für die Bühne choreografiert.</p>
-                   <p class="mb-4">2021 schloss ich meine Ausbildung zur Tanzpädagogin für Klassischen Tanz, Zeitgenössisch und HipHop an der TKA Tanzkunstakademie ab und begann direkt mit dem Unterrichten.</p>
-                   <p>Mit 6 Jahren Erfahrung im Teaching in Stuttgart, Wien und Berlin gebe ich nun mein Wissen in meinem eigenen Studio weiter.</p>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- PRICING -->
-   <section id="pricing" class="py-20 bg-gradient-to-b from-purple-600 to-indigo-700">
+    <section id="about" class="py-20 bg-custom-news-about bg-gradient-to-b from-pink-500 to-pink-600">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><span style="color: white;">Preise & Abos</span></h2>
-            
-            <!-- Information Paragraphs (Stacked vertically) -->
-            <div class="flex flex-col gap-6 mb-10">
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xl transition hover:shadow-2xl">
-                    <h3 class="font-bold text-lg text-gray-900 mb-2">Das Monatsabo</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Eine entspannte, monatliche Abrechnung, jeweils passend zu deinem Startdatum. Über einen längeren Zeitraum kannst du auch deutlich sparen, indem du alternativ entweder <span class="font-bold"> ein halbes oder ein ganzes Jahr </span class="font-bold"> im Voraus wählst und somit monatlich sparst!
-                    </p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><span style="color: white;">Über mich</span></h2>
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                    <div class="aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden shadow-md">
+                        <img src="./images/ich.jpg" alt="Über mich" class="w-full h-full object-cover">
+                    </div>
                 </div>
-
-
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xl transition hover:shadow-2xl">
-                    <h3 class="font-bold text-lg text-gray-900 mb-2">Flexibel bleiben mit 10er Karten</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Für die, die gerne flexibel bleiben – Mit den 10er Karten musst du dich nicht fest binden, sondern kannst 10 beliebige Stunden innerhalb 5 Monate komplett frei wählen!
-                    </p>
+                <div class="flex-1 text-white text-lg leading-relaxed">
+                    <p class="mb-4">Ich bin Anna, diplomierte Tanzpädagogin und möchte im In Rainbows Studio mit euch meine Leidenschaft fürs Klassische Ballett teilen.</p>
+                    <p class="mb-4">Ich habe zahlreiche Erfahrungen auf der Bühne in verschiedensten klassischen und zeitgenössischen Tanzproduktionen sammeln dürfen und später in meiner Arbeit als Ballettpädagogin für zahlreiche Kinder und Jugendliche für die Bühne choreografiert.</p>
+                    <p class="mb-4">2021 schloss ich meine Ausbildung zur Tanzpädagogin für Klassischen Tanz, Zeitgenössisch und HipHop an der TKA Tanzkunstakademie ab und begann direkt mit dem Unterrichten.</p>
+                    <p>Mit 6 Jahren Erfahrung im Teaching in Stuttgart, Wien und Berlin gebe ich nun mein Wissen in meinem eigenen Studio weiter.</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-              
-          
+     <!-- PRICING -->
+    <section id="pricing" class="py-20 bg-gradient-to-b from-purple-600 to-indigo-700">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center"><span style="color: white;">Preise & Abos</span></h2>
+                
+                <!-- Information Paragraphs (Stacked vertically) -->
+                <div class="flex flex-col gap-6 mb-10">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xl transition hover:shadow-2xl">
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Das Monatsabo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Eine entspannte, monatliche Abrechnung, jeweils passend zu deinem Startdatum. Über einen längeren Zeitraum kannst du auch deutlich sparen, indem du alternativ entweder <span class="font-bold"> ein halbes oder ein ganzes Jahr </span class="font-bold"> im Voraus wählst und somit monatlich sparst!
+                        </p>
+                    </div>
 
-        
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-xl transition hover:shadow-2xl">
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Flexibel bleiben mit 10er Karten</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Für die, die gerne flexibel bleiben – Mit den 10er Karten musst du dich nicht fest binden, sondern kannst 10 beliebige Stunden innerhalb 5 Monate komplett frei wählen!
+                        </p>
+                    </div>
 
                 
-
-
-
-        
-
-            </div>
-
-            <!-- Responsive Table Container without horizontal scrolling -->
-            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <div class="w-full">
-                    <table class="w-full border-collapse text-left table-fixed">
-                        <thead>
-                            <tr class="bg-gray-50/75 border-b border-gray-100 text-[10px] sm:text-xs md:text-sm font-semibold text-gray-900">
-                                <th class="p-2 sm:p-4 w-[20%] sm:w-1/5"></th>
-                                <th class="p-2 sm:p-4 w-[20%] sm:w-1/5">
-                                    <span class="block sm:hidden">Monatlich</span>
-                                    <span class="hidden sm:block">Monatlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
-                                </th>
-                                <th class="p-2 sm:p-4 w-[21%] sm:w-1/5">
-                                    <span class="block sm:hidden">6 Monate</span>
-                                    <span class="hidden sm:block">Halbjährlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
-                                </th>
-                                <th class="p-2 sm:p-4 w-[21%] sm:w-1/5">
-                                    <span class="block sm:hidden">12 Monate</span>
-                                    <span class="hidden sm:block">Jährlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
-                                </th>
-                                <th class="p-2 sm:p-4 w-[20%] sm:w-1/5">
-                                    <span class="block sm:hidden">10er</span>
-                                    <span class="hidden sm:block">10er Ticket <span class="text-[10px] align-super font-normal text-black ml-0.5">**</span></span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
-                            <!-- Kids Row -->
-                            <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="p-2 sm:p-4 font-bold text-gray-900 text-xs sm:text-base bg-gray-50/30">
-                                    Kinder
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">50 €</span>
-                                    <span class="text-[9px] sm:text-xs text-gray-500 block">pro Monat</span>
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <div class="flex flex-col lg:flex-row lg:items-center gap-1">
-                                        <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">45 €</span>
-                                        <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
-                                            10% weniger
-                                        </span>
-                                    </div>
-                                    <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
-
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <div class="flex flex-col lg:flex-row lg:items-center gap-1">
-                                        <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">42 €</span>
-                                        <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
-                                            16% weniger
-                                        </span>
-                                    </div>
-                                    <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
-
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">-</span>
-                                    <span class="text-[9px] sm:text-xs text-gray-500 block"></span>
-                                </td>
-                            </tr>
-                            
-                            <!-- Adults Row -->
-                            <tr class="hover:bg-gray-50/50 transition-colors">
-                                <td class="p-2 sm:p-4 font-bold text-gray-900 text-xs sm:text-base bg-gray-50/30">
-                                    Erwachsene
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">50 €</span>
-                                    <span class="text-[9px] sm:text-xs text-gray-500 block">pro Monat</span>
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <div class="flex flex-col lg:flex-row lg:items-center gap-1">
-                                        <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">45 €</span>
-                                        <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
-                                            10% weniger
-                                        </span>
-                                    </div>
-                                    <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <div class="flex flex-col lg:flex-row lg:items-center gap-1">
-                                        <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">42 €</span>
-                                        <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
-                                            16% weniger
-                                        </span>
-                                    </div>
-                                    <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
-
-                                </td>
-                                <td class="p-2 sm:p-4">
-                                    <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">14 €</span>
-                                    <span class="text-[9px] sm:text-xs text-gray-500 block">pro Stunde</span>
-                                </td>
-                            </tr>
-                            <!-- Consolidated Single Payment Row -->
-                            <tr class="bg-gray-50/50 text-[10px] sm:text-xs text-black border-t border-gray-100 italic">
-                                <!-- Leere erste Spalte -->
-                                <td class="p-2 sm:p-4 bg-gray-50/30"></td>
-                                <!-- Keine Striche/Inhalte unter Monatlich -->
-                                <td class="p-2 sm:p-4"></td>
-                                <!-- Halbjährliche Einmalzahlung (Gleicher grauer Stil) -->
-                                <td class="p-2 sm:p-4 leading-normal">
-                                    <span class="block">monatlich 45 € oder einmalige Zahlung von 270 €</span>
-                                </td>
-                                <!-- Jährliche Einmalzahlung (Gleicher grauer Stil) -->
-                                <td class="p-2 sm:p-4 leading-normal">
-                                    <span class="block">monatlich 42 € oder einmalige Zahlung von 504 €</span>
-                                </td>
-                                <!-- Keine Striche/Inhalte unter 10er Ticket -->
-                                <td class="p-2 sm:p-4">einmalige Zahlung von 140 €</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
             
-            <br>
-            
-            <p class="text-[10px] sm:text-xs text-purple-200 mt-4 text-center sm:text-left italic leading-relaxed">
-                * Alle Preise sind Endpreise. Die Vertragslaufzeit der Abos verlängert sich nach Ablauf der Mindestlaufzeit automatisch und ist danach monatlich kündbar. An gesetzlichen Feiertagen sowie während der offiziellen Berliner Schulferien findet in der Regel kein regulärer Unterricht statt (die Beiträge sind als Jahresmischkalkulation berechnet).
-            </p>
-            <p class="text-[10px] sm:text-xs text-purple-200 mt-4 text-center sm:text-left italic leading-relaxed">
-            ** Die 10er Tickets sind personengebunden und müssen innerhalb von 5 Monaten nach Kaufdatum vollständig eingelöst werden.
-            </p>
-            
-            <br>
-            <br>
-            <br>
 
-            <!-- TICKETS BILD-->
-                 <div class="flex flex-col md:flex-row items-center gap-1 md:gap-10">
-        
-                <!-- Linke Seite: Überschrift und Untertitel -->
-                <div class="flex-1">
-                    <h3 class="font-bold text-2xl md:text-3xl text-white mb-2">Flexibel bleiben mit <strong>10er</strong> Karten</h3>
-                    <p class="text-white text-lg md:text-xl">Leg dir den Unterricht wie er dir passt.</p>
+            
+
+                    
+
+
+
+            
+
                 </div>
 
-                    <!-- Rechte Seite: Das große Bild -->
-                    <div class="w-full md:w-2/3 flex-shrink-0">
-                        <img src="./images/tickets.png" alt="10er Tickets" class="w-full h-auto object-contain">
+                <!-- Responsive Table Container without horizontal scrolling -->
+                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                    <div class="w-full">
+                        <table class="w-full border-collapse text-left table-fixed">
+                            <thead>
+                                <tr class="bg-gray-50/75 border-b border-gray-100 text-[10px] sm:text-xs md:text-sm font-semibold text-gray-900">
+                                    <th class="p-2 sm:p-4 w-[20%] sm:w-1/5"></th>
+                                    <th class="p-2 sm:p-4 w-[20%] sm:w-1/5">
+                                        <span class="block sm:hidden">Monatlich</span>
+                                        <span class="hidden sm:block">Monatlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
+                                    </th>
+                                    <th class="p-2 sm:p-4 w-[21%] sm:w-1/5">
+                                        <span class="block sm:hidden">6 Monate</span>
+                                        <span class="hidden sm:block">Halbjährlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
+                                    </th>
+                                    <th class="p-2 sm:p-4 w-[21%] sm:w-1/5">
+                                        <span class="block sm:hidden">12 Monate</span>
+                                        <span class="hidden sm:block">Jährlich <span class="text-[10px] align-super font-normal text-black ml-0.5">*</span></span>
+                                    </th>
+                                    <th class="p-2 sm:p-4 w-[20%] sm:w-1/5">
+                                        <span class="block sm:hidden">10er</span>
+                                        <span class="hidden sm:block">10er Ticket <span class="text-[10px] align-super font-normal text-black ml-0.5">**</span></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 text-xs sm:text-sm">
+                                <!-- Kids Row -->
+                                <tr class="hover:bg-gray-50/50 transition-colors">
+                                    <td class="p-2 sm:p-4 font-bold text-gray-900 text-xs sm:text-base bg-gray-50/30">
+                                        Kinder
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">50 €</span>
+                                        <span class="text-[9px] sm:text-xs text-gray-500 block">pro Monat</span>
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <div class="flex flex-col lg:flex-row lg:items-center gap-1">
+                                            <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">45 €</span>
+                                            <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
+                                                10% weniger
+                                            </span>
+                                        </div>
+                                        <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
+
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <div class="flex flex-col lg:flex-row lg:items-center gap-1">
+                                            <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">42 €</span>
+                                            <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
+                                                16% weniger
+                                            </span>
+                                        </div>
+                                        <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
+
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">-</span>
+                                        <span class="text-[9px] sm:text-xs text-gray-500 block"></span>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Adults Row -->
+                                <tr class="hover:bg-gray-50/50 transition-colors">
+                                    <td class="p-2 sm:p-4 font-bold text-gray-900 text-xs sm:text-base bg-gray-50/30">
+                                        Erwachsene
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">50 €</span>
+                                        <span class="text-[9px] sm:text-xs text-gray-500 block">pro Monat</span>
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <div class="flex flex-col lg:flex-row lg:items-center gap-1">
+                                            <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">45 €</span>
+                                            <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
+                                                10% weniger
+                                            </span>
+                                        </div>
+                                        <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <div class="flex flex-col lg:flex-row lg:items-center gap-1">
+                                            <span class="text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">42 €</span>
+                                            <span class="inline-flex items-center justify-center rounded-full bg-orange-500 px-1 py-0.5 text-[8px] md:text-[9px] font-bold text-white tracking-tight whitespace-nowrap w-fit self-start lg:self-auto">
+                                                16% weniger
+                                            </span>
+                                        </div>
+                                        <span class="block text-[9px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">pro Monat</span>
+
+                                    </td>
+                                    <td class="p-2 sm:p-4">
+                                        <span class="block text-sm sm:text-xl md:text-2xl font-semibold text-gray-900">14 €</span>
+                                        <span class="text-[9px] sm:text-xs text-gray-500 block">pro Stunde</span>
+                                    </td>
+                                </tr>
+                                <!-- Consolidated Single Payment Row -->
+                                <tr class="bg-gray-50/50 text-[10px] sm:text-xs text-black border-t border-gray-100 italic">
+                                    <!-- Leere erste Spalte -->
+                                    <td class="p-2 sm:p-4 bg-gray-50/30"></td>
+                                    <!-- Keine Striche/Inhalte unter Monatlich -->
+                                    <td class="p-2 sm:p-4"></td>
+                                    <!-- Halbjährliche Einmalzahlung (Gleicher grauer Stil) -->
+                                    <td class="p-2 sm:p-4 leading-normal">
+                                        <span class="block">monatlich 45 € oder einmalige Zahlung von 270 €</span>
+                                    </td>
+                                    <!-- Jährliche Einmalzahlung (Gleicher grauer Stil) -->
+                                    <td class="p-2 sm:p-4 leading-normal">
+                                        <span class="block">monatlich 42 € oder einmalige Zahlung von 504 €</span>
+                                    </td>
+                                    <!-- Keine Striche/Inhalte unter 10er Ticket -->
+                                    <td class="p-2 sm:p-4">einmalige Zahlung von 140 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <p class="text-[10px] sm:text-xs text-purple-200 mt-4 text-center sm:text-left italic leading-relaxed">
+                    * Alle Preise sind Endpreise. Die Vertragslaufzeit der Abos verlängert sich nach Ablauf der Mindestlaufzeit automatisch und ist danach monatlich kündbar. An gesetzlichen Feiertagen sowie während der offiziellen Berliner Schulferien findet in der Regel kein regulärer Unterricht statt (die Beiträge sind als Jahresmischkalkulation berechnet).
+                </p>
+                <p class="text-[10px] sm:text-xs text-purple-200 mt-4 text-center sm:text-left italic leading-relaxed">
+                ** Die 10er Tickets sind personengebunden und müssen innerhalb von 5 Monaten nach Kaufdatum vollständig eingelöst werden.
+                </p>
+                
+                <br>
+                <br>
+                <br>
+
+                <!-- TICKETS BILD-->
+                    <div class="flex flex-col md:flex-row items-center gap-1 md:gap-10">
+            
+                    <!-- Linke Seite: Überschrift und Untertitel -->
+                    <div class="flex-1">
+                        <h3 class="font-bold text-2xl md:text-3xl text-white mb-2">Flexibel bleiben mit <strong>10er</strong> Karten</h3>
+                        <p class="text-white text-lg md:text-xl">Leg dir den Unterricht wie er dir passt.</p>
+                    </div>
+
+                        <!-- Rechte Seite: Das große Bild -->
+                        <div class="w-full md:w-2/3 flex-shrink-0">
+                            <img src="./images/tickets.png" alt="10er Tickets" class="w-full h-auto object-contain">
+                            </div>
+
+                    </div>
+                </div>
+            
+
+    </section>
+
+
+    <section id="contact" class="py-20 bg-gradient-to-b from-green-600 to-green-400" text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center"><span style="color: white;">Ich freue mich auf Dich!</span></h2>
+            <p class="text-center text-white font-medium text-lg md:text-xl mb-12">Melde dich hier für eine Probestunde an.</p>
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Formular -->
+                <div class="relative min-h-[400px]">
+
+        <form action="https://api.web3forms.com/submit" method="POST" id="dance-form" class="space-y-6 transition-all duration-500 ease-in-out">
+
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="access_key" value="4bfdb080-7421-487e-9839-51d4a528a5dd">
+
+            <div>
+                <label for="name" class="block text-sm font-medium text-white mb-2">Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-white shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+
+            <div>
+                <label for="course" class="block text-sm font-medium text-white mb-2">Kurs *</label>
+                <select id="course" name="course" onchange="toggleChildFields()" required class="w-full px-4 py-3 rounded-lg bg-white shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+                    <option value="" disabled selected>Bitte wählen</option>
+                    <option value="kinderballett">Kinderballett 5-7 Jahre</option>
+                    <option value="ballett-beginner">Ballett Beginner Erwachsene</option>
+                
+                    <!-- Schnupperkurs Felder deaktiviert
+                    <option value="kinderballett">Schnupperkurs Kinder 5-7 Jahre</option>
+                    <option value="ballett-beginner">Schnupperkurs Erwachsene</option>
+                    -->
+
+                </select>
+            </div>
+        
+            <div id="child-fields" class="hidden space-y-6">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="childName" class="block text-sm font-medium text-white mb-2">Name des Kindes *</label>
+                        <input type="text" id="childName" name="childName" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="childAge" class="block text-sm font-medium text-white mb-2">Geburtstag des Kindes *</label>
+                        <input type="date" id="childAge" name="childAge" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-white mb-2">Mobilnummer *</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-white mb-2">E-Mail *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
+            </div>
+        
+            <div>
+                <label for="message" class="block text-sm font-medium text-white mb-2">Nachricht</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+            </div>
+            
+            <button type="submit" id="submit-btn" class="w-full bg-pink-600 text-white font-bold py-4 rounded-lg hover:bg-orange-500 transition shadow-xl">Nachricht senden</button>
+        </form>
+        <p class="font-normal text-white text-center mt-8">Alternativ kannst du uns eine Mail unter <span class="font-bold text-white">kontakt@inrainbows.de</span> senden.</p>
+
+        <div id="form-result" class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 pointer-events-none transition-all duration-700 ease-in-out transform translate-y-4">
+            <span id="result-icon" class="text-6xl mb-4">🩷</span>
+            <h3 id="result-text" class="text-2xl font-bold text-pink-400">Danke für deine Nachricht!</h3>
+        </div>
+
+        </div>
+
+                    <script>
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        // 1. Standard-Neuladen der Seite verhindern
+                        event.preventDefault(); 
+                        
+                        // 2. Alle Formularfelder komplett ausblenden
+                        document.getElementById('form-fields').classList.add('hidden');
+                        
+                        // 3. Die grüne Erfolgsmeldung anzeigen
+                        document.getElementById('success-message').classList.remove('hidden');
+                    });
+                    </script>
+            
+
+
+        <!-- Location Info -->
+        <div class="bg-green-800/50 p-8 rounded-2xl shadow-2xl">
+
+            <h3 class="text-2xl font-bold mb-6"><span style="color: white;">Hier findest du uns</span> </h3>
+            
+            <div class="bg-green-950 rounded-lg h-64 flex items-center justify-center mb-6 shadow-2xl overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.908237404526!2d13.357712577026708!3d52.55318473377166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8530e537467d9%3A0xb2a0344bc04be7fe!2sTanzraum%20Wedding%20GbR!5e0!3m2!1sde!2sde!4v1780509565876!5m2!1sde!2sde" 
+                    class="w-full h-full" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+                        <!-- Address -->
+            <div class="space-y-2 text-white">
+                            <p class="font-bold text-white">In Rainbows Studio</p>
+                            <p>Osram Höfe · Tanzraum Wedding</p>
+                            <p>Oudenarder Str. 16-20, 13347 Berlin</p>
+                            <p class="font-bold underline" >Im Hof der Eingang A08, im 2. Stock das Studio IV</p>
+                            <p>kontakt@inrainbows.de</p>
+                            <p>Whatsapp: 0177 6532503</p>
                         </div>
 
-                </div>
-            </div>
-        
+                        <!-- Button Wegbeschreibung -->
+                        <div class="flex justify-between items-center pt-6">
+                            <a href="standort.html" 
+                            class="bg-orange-500 hover:bg-blue-400 text-white text-sm font-medium py-2 px-4 rounded-lg border border-white/20 transition flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                Wegbeschreibung
+                            </a>
+                        
+                        <!-- Icons -->
 
-    </section>
-
-
-   <section id="contact" class="py-20 bg-gradient-to-b from-green-600 to-green-400" text-white">
-       <div class="max-w-6xl mx-auto px-4">
-           <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center"><span style="color: white;">Ich freue mich auf Dich!</span></h2>
-           <p class="text-center text-white font-medium text-lg md:text-xl mb-12">Melde dich hier für eine Probestunde an.</p>
-           <div class="grid md:grid-cols-2 gap-12">
-              
-               <!-- Formular -->
-               <div class="relative min-h-[400px]">
-
-    <form action="https://api.web3forms.com/submit" method="POST" id="dance-form" class="space-y-6 transition-all duration-500 ease-in-out">
-
-        <input type="hidden" name="_captcha" value="false">
-
-        <input type="hidden" name="access_key" value="4bfdb080-7421-487e-9839-51d4a528a5dd">
-
-        <div>
-            <label for="name" class="block text-sm font-medium text-white mb-2">Name *</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg bg-white shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-        </div>
-
-        <div>
-            <label for="course" class="block text-sm font-medium text-white mb-2">Kurs *</label>
-            <select id="course" name="course" onchange="toggleChildFields()" required class="w-full px-4 py-3 rounded-lg bg-white shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-                <option value="" disabled selected>Bitte wählen</option>
-                <option value="kinderballett">Kinderballett 5-7 Jahre</option>
-                <option value="ballett-beginner">Ballett Beginner Erwachsene</option>
-               
-                <!-- Schnupperkurs Felder deaktiviert
-                <option value="kinderballett">Schnupperkurs Kinder 5-7 Jahre</option>
-                <option value="ballett-beginner">Schnupperkurs Erwachsene</option>
-                -->
-
-            </select>
-        </div>
-       
-        <div id="child-fields" class="hidden space-y-6">
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label for="childName" class="block text-sm font-medium text-white mb-2">Name des Kindes *</label>
-                    <input type="text" id="childName" name="childName" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-                </div>
-                <div>
-                    <label for="childAge" class="block text-sm font-medium text-white mb-2">Geburtstag des Kindes *</label>
-                    <input type="date" id="childAge" name="childAge" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-                </div>
-            </div>
-            <div>
-                <label for="phone" class="block text-sm font-medium text-white mb-2">Mobilnummer *</label>
-                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-            </div>
-        </div>
-
-        <div>
-            <label for="email" class="block text-sm font-medium text-white mb-2">E-Mail *</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white">
-        </div>
-       
-        <div>
-            <label for="message" class="block text-sm font-medium text-white mb-2">Nachricht</label>
-            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-white border shadow-xl text-black focus:outline-none focus:ring-2 focus:ring-white"></textarea>
-        </div>
-        
-        <button type="submit" id="submit-btn" class="w-full bg-pink-600 text-white font-bold py-4 rounded-lg hover:bg-orange-500 transition shadow-xl">Nachricht senden</button>
-    </form>
-    <p class="font-normal text-white text-center mt-8">Alternativ kannst du uns eine Mail unter <span class="font-bold text-white">kontakt@inrainbows.de</span> senden.</p>
-
-    <div id="form-result" class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 pointer-events-none transition-all duration-700 ease-in-out transform translate-y-4">
-        <span id="result-icon" class="text-6xl mb-4">🩷</span>
-        <h3 id="result-text" class="text-2xl font-bold text-pink-400">Danke für deine Nachricht!</h3>
-    </div>
-
-    </div>
-
-                <script>
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    // 1. Standard-Neuladen der Seite verhindern
-                    event.preventDefault(); 
-                    
-                    // 2. Alle Formularfelder komplett ausblenden
-                    document.getElementById('form-fields').classList.add('hidden');
-                    
-                    // 3. Die grüne Erfolgsmeldung anzeigen
-                    document.getElementById('success-message').classList.remove('hidden');
-                  });
-                </script>
-           
-
-
-      <!-- Location Info -->
-      <div class="bg-green-800/50 p-8 rounded-2xl shadow-2xl">
-
-        <h3 class="text-2xl font-bold mb-6"><span style="color: white;">Hier findest du uns</span> </h3>
-        
-        <div class="bg-green-950 rounded-lg h-64 flex items-center justify-center mb-6 shadow-2xl overflow-hidden">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.908237404526!2d13.357712577026708!3d52.55318473377166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8530e537467d9%3A0xb2a0344bc04be7fe!2sTanzraum%20Wedding%20GbR!5e0!3m2!1sde!2sde!4v1780509565876!5m2!1sde!2sde" 
-            class="w-full h-full" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-         </div>
-                    <!-- Address -->
-         <div class="space-y-2 text-white">
-                        <p class="font-bold text-white">In Rainbows Studio</p>
-                        <p>Osram Höfe · Eingang A08 · Tanzraum Wedding</p>
-                        <p>2. Stock · Raum IV </p>
-                        <p>Oudenarder Str. 16-20</p>
-                        <p>13347 Berlin</p>
-                        <p>kontakt@inrainbows.de</p>
-                        <p>Whatsapp: 0177 6532503</p>
+                        <div class="flex justify-end items-center space-x-6 pt-4">
+                            <a href="https://www.instagram.com/inrainbows.studio/" target="_blank" class="text-white hover:text-pink-600 transition" title="Instagram">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </a>
+                            <a href="https://www.facebook.com/people/In-Rainbows-Ballettunterricht/61592020491536/" target="_blank" class="text-white hover:text-pink-600 transition" title="Facebook">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            </a>
+                            <a href="https://wa.me/491776532503" target="_blank" class="text-white hover:text-pink-600 transition" title="WhatsApp">
+                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path><path d="M9 10a0.5.5 0 0 0 1 0V9a0.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a0.5.5 0 0 0 0-1h-1a0.5.5 0 0 0 0 1"></path></svg>
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Button Wegbeschreibung -->
-                    <div class="flex justify-between items-center pt-6">
-                        <a href="standort.html" 
-                        class="bg-orange-500 hover:bg-blue-400 text-white text-sm font-medium py-2 px-4 rounded-lg border border-white/20 transition flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            Wegbeschreibung
-                        </a>
-                    
-                    <!-- Icons -->
-
-                     <div class="flex justify-end items-center space-x-6 pt-4">
-                        <a href="https://www.instagram.com/inrainbows.studio/" target="_blank" class="text-white hover:text-pink-600 transition" title="Instagram">
-                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <a href="https://www.facebook.com/people/In-Rainbows-Ballettunterricht/61592020491536/" target="_blank" class="text-white hover:text-pink-600 transition" title="Facebook">
-                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        </a>
-                        <a href="https://wa.me/491776532503" target="_blank" class="text-white hover:text-pink-600 transition" title="WhatsApp">
-                           <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path><path d="M9 10a0.5.5 0 0 0 1 0V9a0.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a0.5.5 0 0 0 0-1h-1a0.5.5 0 0 0 0 1"></path></svg>
-                        </a>
-                    </div>
-                </div>
-         </div>
+            </div>
         </div>
-    </section>
+        </section>
+
+    </main>
 
 
    <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm">
